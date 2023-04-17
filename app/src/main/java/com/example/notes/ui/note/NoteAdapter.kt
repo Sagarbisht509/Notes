@@ -1,4 +1,4 @@
-package com.example.notes
+package com.example.notes.ui.note
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,13 +9,15 @@ import com.example.notes.databinding.NoteItemBinding
 import com.example.notes.models.NoteResponse
 
 
-class NoteAdapter(private val onNoteClicked: (NoteResponse) -> Unit) : ListAdapter<NoteResponse, NoteAdapter.NoteViewHolder>(ComparatorDiffUtil()) {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteAdapter.NoteViewHolder {
+class NoteAdapter(private val onNoteClicked: (NoteResponse) -> Unit) : ListAdapter<NoteResponse, NoteAdapter.NoteViewHolder>(
+    ComparatorDiffUtil()
+) {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
         val binding = NoteItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return NoteViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: NoteAdapter.NoteViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         val note = getItem(position)
         note?.let {
             holder.bind(it)
