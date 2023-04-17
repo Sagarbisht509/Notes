@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="txt_no_account">Don\'t have an account? <font color="blue">Register Now</font>>  </string>
+    <string name="txt_have_account">Already have an account? <font color="">Login Now</font>>  </string>
+</resources>
