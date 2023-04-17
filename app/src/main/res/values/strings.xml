@@ -1,5 +1,19 @@
 <resources>
     <string name="app_name">Notes</string>
-    <string name="txt_no_account">Don\'t have an account? <font color="blue">Register Now</font>>  </string>
-    <string name="txt_have_account">Already have an account? <font color="">Login Now</font>>  </string>
+    <string name="txt_no_account">Don\'t have an account? <font color="blue">Register Now</font>  </string>
+    <string name="txt_have_account">Already have an account? <font color="blue">Login Now</font> </string>
+    <string name="txt_notes">Notes</string>
+    <string name="txt_adding_new_note">adding new note</string>
+    <string name="txt_note_description">Note description</string>
+    <string name="txt_note_title">Note Title</string>
+    <string name="txt_edit_note">Edit Note</string>
+    <string name="txt_delete_note">delete note</string>
+    <string name="txt_write_your_title_here">Write your title here</string>
+    <string name="txt_write_your_description_here">Write your description here</string>
+    <string name="txt_save">SAVE</string>
+    <string name="txt_login">LOGIN</string>
+    <string name="txt_register">REGISTER</string>
+    <string name="txt_password">**********</string>
+    <string name="txt_gmail">johnwick@gmail.com</string>
+    <string name="txt_username">John Wick</string>
 </resources>

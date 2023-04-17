@@ -3,34 +3,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
-    tools:context=".LoginFragment">
+    android:orientation="vertical"
+    tools:context=".ui.auth.LoginFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:padding="10dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_gravity="center"
+            android:autofillHints=""
             android:drawableStart="@drawable/ic_email"
             android:drawablePadding="10dp"
-            android:hint="@string/txt_gmail" />
+            android:hint="@string/txt_gmail"
+            android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_gravity="center"
+            android:autofillHints=""
             android:drawableStart="@drawable/ic_password"
             android:drawablePadding="10dp"
-            android:hint="@string/txt_password" />
+            android:hint="@string/txt_password"
+            android:inputType="textWebPassword" />
 
         <TextView
             android:id="@+id/errorMessage"
@@ -43,18 +47,27 @@
             android:id="@+id/loginBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/teal_200"
-            android:textColor="@color/black"
             android:layout_gravity="center"
-            android:text="@string/txt_login"/>
+            android:backgroundTint="@color/teal_200"
+            android:text="@string/txt_login"
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_marginTop="10dp"
+            android:gravity="center"
             android:text="@string/txt_no_account" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:visibility="invisible" />
 
     </LinearLayout>
 
