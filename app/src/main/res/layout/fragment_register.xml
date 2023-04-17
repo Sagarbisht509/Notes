@@ -20,36 +20,43 @@ tools:context=".RegisterFragment">
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:hint="John Wick" />
+        android:drawableStart="@drawable/ic_person"
+        android:drawablePadding="10dp"
+        android:hint="@string/txt_username" />
 
     <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:hint="abc@gmail.com" />
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="10dp"
+        android:hint="@string/txt_gmail" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:hint="**********" />
+        android:drawableStart="@drawable/ic_password"
+        android:drawablePadding="10dp"
+        android:hint="@string/txt_password" />
 
     <TextView
         android:id="@+id/errorMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text=""
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textStyle="italic" />
 
     <Button
         android:id="@+id/registerBtn"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"/>
+        android:layout_gravity="center"
+        android:backgroundTint="@color/teal_200"
+        android:textColor="@color/black"
+        android:text="@string/txt_register"/>
 
     <TextView
         android:id="@+id/login"
@@ -57,7 +64,7 @@ tools:context=".RegisterFragment">
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="10dp"
-        android:text="login" />
+        android:text="@string/txt_have_account" />
 
 </LinearLayout>
 

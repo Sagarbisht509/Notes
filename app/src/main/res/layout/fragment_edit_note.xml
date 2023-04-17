@@ -11,7 +11,11 @@
         android:id="@+id/whichOne"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Edit Note"
+        android:text="@string/txt_edit_note"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -19,20 +23,20 @@
     <EditText
         android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Write your title here"
+        android:layout_height="60dp"
+        android:hint="@string/txt_write_your_title_here"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/whichOne"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="100dp" />
 
     <EditText
         android:id="@+id/description"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginTop="10dp"
         android:scrollbars="vertical"
-        android:hint="Write your description here"
+        android:hint="@string/txt_write_your_description_here"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title" />
@@ -43,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@id/description"
-        android:text="SAVE"/>
+        android:text="@string/txt_save"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/delete"
@@ -51,6 +55,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/icon_delete"/>
+        android:src="@drawable/icon_delete"
+        android:contentDescription="@string/txt_delete_note" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

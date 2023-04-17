@@ -10,7 +10,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:gravity="center_vertical"
         android:padding="10dp"
         android:orientation="vertical">
@@ -18,38 +17,36 @@
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
-            android:layout_marginStart="2dp"
-            android:layout_weight="2.8"
-            android:drawablePadding="12dp"
-            android:hint="abc@gmail.com" />
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="10dp"
+            android:hint="@string/txt_gmail" />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
-            android:layout_marginStart="2dp"
-            android:layout_weight="2.8"
-            android:drawablePadding="12dp"
-            android:hint="**********"
-            android:inputType="textPassword" />
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="10dp"
+            android:hint="@string/txt_password" />
 
         <TextView
             android:id="@+id/errorMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text=""
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            android:textStyle="italic" />
 
         <Button
             android:id="@+id/loginBtn"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"/>
+            android:backgroundTint="@color/teal_200"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:text="@string/txt_login"/>
 
         <TextView
             android:id="@+id/register"
