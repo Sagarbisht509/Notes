@@ -15,7 +15,6 @@ import com.example.notes.utils.NetworkResult
 import com.example.notes.viewmodels.NoteViewModel
 import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.HiltAndroidApp
 
 @AndroidEntryPoint
 class EditNoteFragment : Fragment() {
@@ -28,7 +27,7 @@ class EditNoteFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentEditNoteBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -41,7 +40,7 @@ class EditNoteFragment : Fragment() {
     }
 
     private fun bindObserver() {
-        noteViewModel.notesLiveData.observe(viewLifecycleOwner, Observer {
+        noteViewModel.status.observe(viewLifecycleOwner, Observer {
             when(it) {
                 is NetworkResult.Error -> {
                     //Toast.makeText(context)
@@ -71,7 +70,7 @@ class EditNoteFragment : Fragment() {
 
         binding.delete.setOnClickListener {
             noteResponse?.let {
-                noteViewModel.deleteNote(it!!._id)
+                noteViewModel.deleteNote(it._id)
             }
         }
     }
